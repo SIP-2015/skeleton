@@ -1,1 +1,1 @@
-# skeleton
+Skeleton code for SIP-2015's assignments.

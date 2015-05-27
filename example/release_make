@@ -1,0 +1,7 @@
+# This is a simple makefile to compile the given example.cpp file in this directory.
+# Note that the file is split between two separate files, example.cpp and example_main.cpp.
+# This is to avoid conflicting with the main function of example_test.cpp when compiling
+# the gtest file.
+
+example: example.cpp example_main.cpp
+	g++ -Wall -std=c++11 example.cpp example_main.cpp -o example

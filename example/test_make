@@ -1,0 +1,4 @@
+# This is a simple makefile to compile the given example_test.cpp file in this directory.
+
+example_tests: example_test.cpp example.cpp example.h
+	g++ -std=c++11 -Wall example_test.cpp example.cpp -lgtest -pthread -lgtest_main -o example_tests
