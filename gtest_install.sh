@@ -41,21 +41,12 @@ int main(int argc, char ** argv) {
 }
 EOM
 
-EXPECTED="[==========] Running 1 test from 1 test case.
-[----------] Global test environment set-up.
-[----------] 1 test from testf
-[ RUN      ] testf.add
-[       OK ] testf.add (0 ms)
-[----------] 1 test from testf (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test case ran. (0 ms total)
-[  PASSED  ] 1 test."
+EXPECTED="[  PASSED  ] 1 test."
 
 g++ -std=c++11 -Wall testf.cpp -lgtest -pthread -lgtest_main -o testf
 if [ -e testf ]; then
     OUTPUT=$(./testf)
-    if [ "$OUTPUT" == "$EXPECTED" ]; then
+    if [[ "$OUTPUT" == *"$EXPECTED" ]]; then
         echo "Google Test successfully installed."
     else
         echo -e "Google Test encountered a runtime error:\n$OUTPUT"
