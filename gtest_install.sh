@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Use this install script at your own risk. I cannot guarentee it will work with your OS,
+# so skim it and make sure that you are ok with it before running it
+
 echo Installing Google Test...
 wget http://googletest.googlecode.com/files/gtest-1.7.0.zip
 unzip gtest-1.7.0.zip
