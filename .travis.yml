@@ -2,4 +2,4 @@ language: cpp
 compiler:
   - gcc
   - clang
-script: make -f ./**/*make
+script: cd example && make -f test_make && make -f release_make
