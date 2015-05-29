@@ -1,5 +1,5 @@
 language: cpp
 compiler:
   - gcc
-  - clang
+install: sudo apt-get install build-essential
 script: cd example && make -f test_make && make -f release_make
