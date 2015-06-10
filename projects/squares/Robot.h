@@ -25,13 +25,13 @@ class Robot {
     bool can_move_up();
     void move_down();
     bool can_move_down();
-    int32_t get_key(int16_t x, int16_t y);
     int32_t get_count();
     int32_t has_visited(int16_t x, int16_t y);
     void set_count(int32_t c);
 
  private:
     int32_t position(int16_t delta_x, int16_t delta_y);
+    int32_t get_key(int16_t x, int16_t y);
     bool exists(int16_t x, int16_t y);
     unordered_set<int32_t> * squares;
     unordered_set<int32_t> * visited;
