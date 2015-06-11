@@ -40,6 +40,7 @@ void print_joined(int32_t a, int32_t b) {
  */
 int32_t absolute_sum(int32_t a, int32_t b) {
     /* YOUR CODE HERE */
+    return 0;
 }
 
 int32_t min_of_three(int32_t a, int32_t b, int32_t c); //forward declaration for min_of_three
@@ -60,6 +61,7 @@ int32_t min_of_three(int32_t a, int32_t b, int32_t c); //forward declaration for
  */
 int32_t largest_product(int32_t a, int32_t b, int32_t c) {
     /* YOUR CODE HERE */
+    return 0;
 }
 
 /**
@@ -94,4 +96,5 @@ int32_t min_of_three(int32_t a, int32_t b, int32_t c) {
  */
 int32_t fact_or_fib(int32_t n){
     /* YOUR CODE HERE */
+    return 0;
 }

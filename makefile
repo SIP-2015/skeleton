@@ -1,5 +1,5 @@
 
-all: example squares functions
+all: squares functions
 
 squares: projects/squares/Robot.cpp 
 	g++ -Wall -std=c++11 projects/squares/Robot.cpp -o projects/squares/robot -c
