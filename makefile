@@ -1,8 +1,8 @@
 
-all: example squares
-
-example: example/example.cpp example/example_main.cpp
-	g++ -Wall -std=c++11 example/example.cpp example/example_main.cpp -o example/example
+all: example squares functions
 
 squares: projects/squares/Robot.cpp 
 	g++ -Wall -std=c++11 projects/squares/Robot.cpp -o projects/squares/robot -c
+
+functions: tasks/functions/functions.cpp tasks/functions/functions_main.cpp
+	g++ -Wall -std=c++11 tasks/functions/functions.cpp tasks/functions/functions_main.cpp -o tasks/functions/functions
