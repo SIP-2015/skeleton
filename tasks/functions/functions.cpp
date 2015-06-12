@@ -6,7 +6,7 @@
  */
 
 #include <iostream>
-#include <iomanip>
+#include <cstdint>
 
 /**
  * Question 1: Given two integers, print them on a single line, with no spaces,
@@ -29,7 +29,6 @@ void print_joined(int32_t a, int32_t b) {
  
 /**
  * Question 2: Find the absolute value of the sum of two numbers.
- *      Bonus: None
  * 
  * @brief returns the absolute value of (a + b)
  * 
@@ -46,13 +45,10 @@ int32_t absolute_sum(int32_t a, int32_t b) {
 int32_t min_of_three(int32_t a, int32_t b, int32_t c); //forward declaration for min_of_three
 
 /**
- * Question 3: Find the largest product of any two numbers from three given positive integers,
- *             using only a single expression.
- *      Bonus: None
- * @brief returns the largest product that can be made with any of the two integers
- * @details finds the largest product that can be made with any of the two integers,
- *          using only a single expression.
- *          HINT: The helper function below, min_of_three, might come in handy
+ * Question 3: Find the largest product of any two numbers from three given positive integers.
+ *      Bonus: Complete this question using only a single statement.
+ *       HINT: The helper function below, min_of_three, might come in handy
+ * @brief returns the largest product that can be made with any two of the integers
  * 
  * @param a the first integer
  * @param b the second integer
@@ -87,7 +83,6 @@ int32_t min_of_three(int32_t a, int32_t b, int32_t c) {
  *                 is undefined for inputs less than 0.
  *                 fib(n) = n                       if n < 2
  *                 fib(n) = fib(n-1) + fib(n-2)     if n >= 2
- *      Bonus: None
  * 
  * @brief Calculates either n! or the nth fibonacci number
  * 
