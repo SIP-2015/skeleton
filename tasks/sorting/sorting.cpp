@@ -10,21 +10,6 @@
 #include <time.h>
 
 /**
-* @brief returns a randomly generated integer array with size elements
-* 
-* @param size the number of elements to have in the array.
-* @return the new array
-*/
-int32_t * get_random_array_of_size(int32_t size) {
-    srand(time(NULL));
-    int32_t * new_array = new int32_t[size];
-    for (int32_t i = 0; i < size; i += 1) {
-        new_array[i] = rand() % size;
-    }
-    return new_array;
-}
-
-/**
  * Question 1: Given an array and two indices within it, swap the elements at the indices in the original array.
  * 
  * @brief swaps two elements in an array
@@ -151,5 +136,20 @@ void quicksort(int32_t array[], int32_t low, int32_t high) {
             return;
         }
     }
+}
+
+/**
+* @brief returns a randomly generated integer array with size elements
+* 
+* @param size the number of elements to have in the array.
+* @return the new array
+*/
+int32_t * get_random_array_of_size(int32_t size) {
+    srand(time(NULL));
+    int32_t * new_array = new int32_t[size];
+    for (int32_t i = 0; i < size; i += 1) {
+        new_array[i] = rand() % size;
+    }
+    return new_array;
 }
 
