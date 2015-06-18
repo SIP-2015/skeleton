@@ -5,6 +5,8 @@
  *       Author: Matthew Mussomele   
  */
 
+#include <cstdint>
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 // This assignment is a little different than most. You won't be writing any               //
 // whole functions yourself. Instead, you will take the mostly correct functions           //
@@ -70,7 +72,7 @@ int32_t fibonacci(int32_t n) {
 
 /**
  * Question 4: Fix the contains_even_digit function. You may assume all inputs are positive.
- *       Note: The operation (digit >>> 1) effectively divides a number by two, rounding down.
+ *       Note: The operation (digit >> 1) effectively divides a number by two, rounding down.
  *       
  * @brief checks whether n contains an even digit
  * 
@@ -80,7 +82,7 @@ int32_t fibonacci(int32_t n) {
 bool contains_even_digit(int32_t n) {
     while (n > 0) {
         int32_t digit = n % 10;
-        if (digit / 2 == digit >>> 1) {
+        if (digit / 2 == digit >> 1) {
             return true;
         }
         n /= 10;

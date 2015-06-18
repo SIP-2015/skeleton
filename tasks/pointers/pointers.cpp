@@ -24,6 +24,7 @@
  */
 int32_t get_value(int32_t * a) {
     /* YOUR CODE HERE */
+    return 0;
 }
 
 /**
@@ -48,6 +49,7 @@ void set_value(int32_t * a, int32_t new_value) {
  */
 int32_t get_true_value(int32_t ** a) {
     /* YOUR CODE HERE */
+    return 0;
 }
 
 /**
@@ -62,6 +64,7 @@ int32_t get_true_value(int32_t ** a) {
  */
 int32_t * move_pointer(int32_t * pointer, int32_t inc) {
     /* YOUR CODE HERE */
+    return 0;
 }
 
 /**
@@ -76,6 +79,7 @@ int32_t * move_pointer(int32_t * pointer, int32_t inc) {
  */
 int32_t get_shifted_value(int32_t * pointer, int32_t inc) {
     /* YOUR CODE HERE */
+    return 0;
 } 
 
 /**
@@ -94,4 +98,5 @@ int32_t get_shifted_value(int32_t * pointer, int32_t inc) {
  */
 int32_t apply(/* YOUR CODE HERE */) {
     /* YOUR CODE HERE */
+    return 0;
 }
