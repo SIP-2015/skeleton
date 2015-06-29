@@ -196,8 +196,8 @@ int32_t Robot::get_count() {
  * 
  * @param c The number to set the steps to
  */
-void Robot::set_count(int32_t c) {
-    step_count = c;
+void Robot::reset_count(int32_t c) {
+    step_count = 0;
 }
 
 /**
