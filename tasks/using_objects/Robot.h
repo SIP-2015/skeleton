@@ -25,9 +25,12 @@ class Robot {
     bool can_move_up();
     void move_down();
     bool can_move_down();
+    void move_to(int16_t x, int16_t y);
+    bool can_move_to(int16_t x, int16_t y);
     int32_t get_count();
     int32_t has_visited(int16_t x, int16_t y);
-    void reset_count(int32_t c);
+    void set_count(int32_t c);
+    int32_t get_position_key();
 
  private:
     int32_t position(int16_t delta_x, int16_t delta_y);

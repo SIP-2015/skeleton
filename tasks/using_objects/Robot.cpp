@@ -4,21 +4,20 @@
  *  Created on: June 7, 2015
  *      Author: Matthew Mussomele
  *      
- * This file is part of the squares project, based on http://nifty.stanford.edu/2015/tychonievich-sherriff-layer-counting-squares/
+ * This task is based on the squares project, found at http://nifty.stanford.edu/2015/tychonievich-sherriff-layer-counting-squares/
  *
- * Robots simply knowledge of a set of rooms and their own personal attributes. When interns complete this project, they are
+ * Robots simply have knowledge of a set of rooms and their own personal attributes. When interns complete this project, they are
  * not expected to know how the Robot class works, in fact, they may not even have gotten to OOP yet. But this will serve as a useful 
  * abtraction for them to use when designing algorithms to count the number of rooms in sets of rooms. 
  * Because tuples do not have a hash function and sets of rooms should not exceed 1000x1000, coordinates will be 16 bit integers and
  * their 'hash function' should return (x << 16) + y, creating a 32 bit representation, which will be stored in the set of rooms.
  * In order to get the coordinates back from a 32 bit integer, in pseudocode, do
- *     x = hash >>> 16;
+ *     x = hash >> 16;
  *     y = hash % (2^16);
  */
 
 #include <unordered_set>
 #include <cstdint>
-
 #include "Robot.h"
 
 /**
@@ -33,8 +32,9 @@ Robot::Robot(std::unordered_set<int32_t> * maze, int16_t x, int16_t y) {
     visited = new std::unordered_set<int32_t>({ get_key(x, y) });
     x_pos = x;
     y_pos = y;
+    log_current_location();
     health = 10;
-    step_count = 0;
+    step_count = 1;
 }
 
 /**
@@ -126,6 +126,38 @@ bool Robot::can_move_down() {
 }
 
 /**
+ * @brief If possible, the Robot teleports to the given room.
+ * @details The robot teleports to the given room. WARNING: If the room does not exist,
+ *          the robot will break and always get the wrong value when tracking room sizes.
+ * 
+ * @param x the x coordinate to move to
+ * @param y the y coordinate to move to
+ */
+void Robot::move_to(int16_t x, int16_t y) {
+    if (can_move_to(x, y)) {
+        x_pos = x;
+        y_pos = y;
+        log_current_location();
+    } else {
+        health = 0;
+    }
+}
+
+/**
+ * @brief Checks if the Robot teleport to 
+ * 
+ * @param x the x coordinate to check
+ * @param y the y coordinate to check
+ * 
+ * @return true if the room matching the coordinates exists
+ */
+bool Robot::can_move_to(int16_t x, int16_t y) {
+    return exists(x - x_pos, y - y_pos);
+}
+
+
+
+/**
  * @brief Gets information on this Robot's interactions with the given coordinates
  * @details Checks if the coordinates represent an existing room, and checks if the Robot has visited it if they do
  * 
@@ -188,7 +220,11 @@ bool Robot::exists(int16_t x, int16_t y) {
  * @return The number of steps the Robot has taken
  */
 int32_t Robot::get_count() {
-    return step_count;
+    if (health > 0) {
+        return step_count;
+    } else {
+        return 0x1DEADB07;
+    }
 }
 
 /**
@@ -196,8 +232,17 @@ int32_t Robot::get_count() {
  * 
  * @param c The number to set the steps to
  */
-void Robot::reset_count(int32_t c) {
-    step_count = 0;
+void Robot::set_count(int32_t c) {
+    step_count = c;
+}
+
+/**
+ * @brief gets the key corresponding to the Robot's current location
+ *
+ * @return the key of the current location
+ */
+int32_t Robot::get_position_key() {
+    return get_key(x_pos, y_pos);
 }
 
 /**

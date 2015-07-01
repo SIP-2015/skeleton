@@ -26,6 +26,7 @@ int main(int argc, char ** argv) {
     printf("absolute_sum(%d, %d) = %d\n", a, b, absolute_sum(a, b));
     printf("absolute_sum(%d, %d) = %d\n", a, -b, absolute_sum(a, -b));
     printf("largest_product(%d, %d, %d) = %d\n", a, b, c, largest_product(a, b, c));
+    printf("largest_prime_under(%d) = %d\n", c, largest_prime_under(c));
     printf("fact_or_fib(%d) = %d\n", a, fact_or_fib(a));
     printf("fact_or_fib(%d) = %d\n", b, fact_or_fib(b));
     printf("fact_or_fib(%d) = %d\n", c, fact_or_fib(c));

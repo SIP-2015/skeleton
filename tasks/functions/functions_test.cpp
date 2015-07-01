@@ -75,6 +75,22 @@ namespace {
         ASSERT_EQ(16, largest_product(4, 4, 4));
     }
 
+    TEST_F(function_test, test_largest_prime_under_valid) {
+        ASSERT_EQ(17, largest_prime_under(17));
+        ASSERT_EQ(17, largest_prime_under(18));
+        ASSERT_EQ(2, largest_prime_under(2));
+        ASSERT_EQ(3, largest_prime_under(3));
+        ASSERT_EQ(97, largest_prime_under(100));
+        ASSERT_EQ(79, largest_prime_under(81));
+        ASSERT_EQ(31, largest_prime_under(32));
+    }
+
+    TEST_F(function_test, test_largest_prime_under_noprime) {
+        ASSERT_EQ(1, largest_prime_under(1));
+        ASSERT_EQ(0, largest_prime_under(0));
+        ASSERT_EQ(-2000, largest_prime_under(-2000));
+    }
+
     TEST_F(function_test, test_fact_or_fib_fact) {
         ASSERT_EQ(6, fact_or_fib(3));
         ASSERT_EQ(5040, fact_or_fib(7));
