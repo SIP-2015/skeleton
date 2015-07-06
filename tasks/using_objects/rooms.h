@@ -12,7 +12,7 @@
 #include "Robot.h"
 
 int32_t square_room_top_left_corner(Robot& robot);
-int32_t rectangle_room_top_left_corner(Robot& robot);
+int32_t rectangle_room_top_left_corner(Robot * robot);
 int32_t rectangle_room_random_location(Robot& robot);
 int32_t irregular_room_random_location(Robot& robot);
 

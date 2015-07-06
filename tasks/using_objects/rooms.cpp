@@ -19,14 +19,29 @@
 // that and the comments on the public methods to help you figure //
 // out what tools you have at your disposal to solve the problems //
 // at hand.                                                       //
+// The header file for the robot should provide you with the info //
+// you need, as the function descriptions are fairly              //
+// representative of their behavior. Please ignore any functions  //
+// that fall under the "private" tag, as you will not be able to  //
+// use them.                                                      //
 //                                                                //
 // Prompt: Your robot has been placed inside of a large room of   //
 //         of unknown size. The room is split into many square    //
 //         sections separated by walls. Your goal is to figure    //
 //         out the size of the room by simply moving from room to //
 //         room. The robot will automatically keep track of how   //
-//         many steps it has taken, and you can reset it's step   //
+//         many steps it has taken, and you can reset its step    //
 //         counter at any time.                                   //
+//         Your robot has the ability to move into the left,      //
+//         right, top and bottom squares. It can also teleport    //
+//         to any given location. These movement rules have some  //
+//         restrictions, however. If you attempt to move in one   //
+//         of the four directions and there is no square there,   //
+//         your robot will lose one of its ten health points.     //
+//         If your robot loses all ten, it will break and always  //
+//         give you an incorrect step count.                      //
+//         If you attempt to teleport to an invalid room, your    //
+//         your robot will immediately break.                     //
 //         An example of a simple room with 9 squares is below:   //
 //         	            ___________                               //
 //                     |   |   |   |                              //
@@ -49,6 +64,9 @@
 //                     |   |   |   |                              //
 //                     |___|___|___|                              //
 //                                                                //
+//         Any solutions that pretend there are no extra squares  //
+//         should achieve this result, so no extra efforts need   //
+//         be taken to ignore these squares.                      //
 ////////////////////////////////////////////////////////////////////
 
 /**
@@ -70,7 +88,8 @@ int32_t square_room_top_left_corner(Robot& robot) {
 /**
  * Question 2: Your robot has been placed in the top left corner of a room you know
  *             is rectangular. Use the robot's built in functions to figure out how large 
- *             the room is.
+ *             the room is. Note that on this question you have been given a pointer to
+ *             a Robot and not a reference.
  * 
  * @brief finds the size of a rectangular room, with the knowledge that the Robot
  *        starts at the top left corner of the room
@@ -78,7 +97,7 @@ int32_t square_room_top_left_corner(Robot& robot) {
  * @param robot a robot that has been placed in a rectangular room
  * @return the area of the room
  */
-int32_t rectangle_room_top_left_corner(Robot& robot) {
+int32_t rectangle_room_top_left_corner(Robot * robot) {
 	/* YOUR CODE HERE */
     return 0;
 }
@@ -98,6 +117,13 @@ int32_t rectangle_room_random_location(Robot& robot) {
 	/* YOUR CODE HERE */
     return 0;
 }
+
+////////////////////////////////////////////////////
+// The following three functions likely will come //
+// in handy when attempting question 4.           //
+// They will allow you to convert coordinates     //
+// into a location key and vice versa.            //
+////////////////////////////////////////////////////
 
 // returns the unordered_set key corresponding to the coordinates
 int32_t get_key(int16_t x, int16_t y) {

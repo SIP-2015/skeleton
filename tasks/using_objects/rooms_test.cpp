@@ -190,18 +190,18 @@ namespace {
     } 
 
     TEST_F(rooms_test, test_rect_room_top_left_small) {
-        Robot rob1(create_rectangle_room(1, 2), 0, 1);
-        Robot rob2(create_rectangle_room(5, 2), 0, 1);
-        Robot rob3(create_rectangle_room(3, 9), 0, 8);
+        Robot * rob1 = new Robot(create_rectangle_room(1, 2), 0, 1);
+        Robot * rob2 = new Robot(create_rectangle_room(5, 2), 0, 1);
+        Robot * rob3 = new Robot(create_rectangle_room(3, 9), 0, 8);
         ASSERT_EQ(2, rectangle_room_top_left_corner(rob1));
         ASSERT_EQ(10, rectangle_room_top_left_corner(rob2));
         ASSERT_EQ(27, rectangle_room_top_left_corner(rob3));
     }
 
     TEST_F(rooms_test, test_rect_room_top_left_large) {
-        Robot rob1(create_rectangle_room(21, 17), 0, 16);
-        Robot rob2(create_rectangle_room(41, 57), 0, 56);
-        Robot rob3(create_rectangle_room(65, 92), 0, 91);
+        Robot * rob1 = new Robot(create_rectangle_room(21, 17), 0, 16);
+        Robot * rob2 = new Robot(create_rectangle_room(41, 57), 0, 56);
+        Robot * rob3 = new Robot(create_rectangle_room(65, 92), 0, 91);
         ASSERT_EQ(357, rectangle_room_top_left_corner(rob1));
         ASSERT_EQ(2337, rectangle_room_top_left_corner(rob2));
         ASSERT_EQ(5980, rectangle_room_top_left_corner(rob3));
@@ -263,7 +263,7 @@ namespace {
         ASSERT_EQ(2964, irregular_room_random_location(rob4));
     }
 
-    TEST_F(rooms_test, test_irregular_room_random_location_random) {
+    TEST_F(rooms_test, test_irregular_room_random_location_random_room) {
         srand(time(NULL));
         int32_t size = 10 + (rand() % 100);
         Robot rob1(create_room_type_4(size), start_x, start_y);
@@ -271,7 +271,7 @@ namespace {
         size += rand() % 250;
         Robot rob2(create_room_type_4(size), start_x, start_y);
         ASSERT_EQ(size, irregular_room_random_location(rob2));
-        size += rand() % 2500;
+        size += 2500;
         Robot rob3(create_room_type_4(size), start_x, start_y);
         ASSERT_EQ(size, irregular_room_random_location(rob3));
     }
