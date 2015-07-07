@@ -1,0 +1,23 @@
+1. Write a function called DisplayArea that displays the area of a room when the 
+width and length are passed as arguments. Are width and length passed by value or reference?
+
+2. Write a function called CalculateArea that calculates the area of a room when the width 
+and length and area are passed as arguments. Are width and length and area passed by value or reference? 
+Show a sample call. 
+
+3. Write a function called Area that calculates the area of a room and returns area when the width and length 
+are passed as arguments. Show a sample call.
+
+4. Write a function called CalculatePerimeter that calculates the perimeter when the width and length and 
+perimeter are passed as arguments. Are width and length and perimeter passed by value or reference? Show a sample call. 
+
+5. Write a function called Perimeter that calculates the perimeter of a room and returns perimeter 
+when the width and length are passed as arguments. Show a sample call. 
+
+6. Write a function called GetDimensions with two arguments width and length that prompts for 
+and receives width and length. 
+
+7. Write a function called PrintDimensions with two arguments width and length that displays width and length. 
+
+8. Write a function called CalculateSalesTax with arguments purchaseAmt and 
+salesTaxrate and salesTax that calculates sales tax. 
