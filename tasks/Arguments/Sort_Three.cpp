@@ -1,5 +1,5 @@
-/*
- *
+/*  Write an algorithm that will sort three numbers.  User will input the three numbers and the algorithm will display
+ *  the three numbers in sorted order.
  *
  *	Display:
  *
@@ -9,7 +9,6 @@
  *
  *
  */
-
 
 
 
