@@ -1,6 +1,6 @@
-/*   Design an algorithm to play a number guessing game.  You will need to get a random number.  User will enter guesses
- *   and algorithm should return whether the guess was too high or too low - or just right.
- *
+/*   Design an algorithm to play a number guessing game.  You will need to get a random number.  
+ *   User will enter guesses and algorithm should return whether the guess was too high or too low - or just right.
+ *   Algorithm should keep count of the number of guesses and display how many guesses it took to find the number.
  *
  *
  * 	Display:
