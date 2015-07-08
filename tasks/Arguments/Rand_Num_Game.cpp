@@ -1,4 +1,5 @@
-/*
+/*   Design an algorithm to play a number guessing game.  You will need to get a random number.  User will enter guesses
+ *   and algorithm should return whether the guess was too high or too low - or just right.
  *
  *
  *
@@ -23,8 +24,6 @@
  *
  *
  */
-
-
 
 
 #include <iostream>
