@@ -16,7 +16,7 @@ sudo cp -a include/gtest /usr/include/
 sudo cp -a lib/.libs/* /usr/lib/
 echo Cleaning up...
 cd ..
-rm -r gtest-1.7.0
+sudo rm -r gtest-1.7.0
 
 cat > testf.cpp <<- EOM
 #include "gtest/gtest.h"
