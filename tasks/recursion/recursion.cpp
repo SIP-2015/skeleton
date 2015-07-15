@@ -50,7 +50,6 @@ void swap(char[], int32_t, int32_t);
  */
 void reverse_string(char word[], int32_t start, int32_t end) {
     /* YOUR CODE HERE */
-    return 0;
 }
 
 void swap(char word[], int32_t i, int32_t j) {
@@ -80,7 +79,7 @@ void swap(char word[], int32_t i, int32_t j) {
  */
 bool is_palindrome(const char * word, int32_t start, int32_t end) {
     /* YOUR CODE HERE */
-    return 0;
+    return false;
 }
 
 //uncomment the line below if you want to use the make_change_with function
