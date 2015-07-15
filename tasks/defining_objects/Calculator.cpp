@@ -16,7 +16,7 @@
 // This assignment is going to be much more independent than your    //
 // past tasks. You are expected to fully implement the Calculator    //
 // class from scratch. Your implementation must have the following   //
-// functions, along with a constructor and destructor:               //
+// public functions, along with a constructor and destructor:        //
 //                                                                   //
 //     double add(double x, double y)                                // 
 //     double mul(double x, double y)                                //
@@ -28,6 +28,9 @@
 //     double div_stored(double x)                                   //
 //     void store(double value);                                     //
 //     std::string get_call(int32_t item)                            //
+//                                                                   //
+// Note: You may have as many private variables and functions as you //
+//       want.                                                       //
 //                                                                   //
 // The get_call function is a bonus and you are not expected to know //
 // how to do it quickly. It should be more challenging than the rest //
