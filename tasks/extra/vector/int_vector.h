@@ -1,5 +1,5 @@
 /*
- * IntVector.h
+ * int_vector.h
  *
  *  Created on: July 22, 2015
  *      Author: Matthew Mussomele
@@ -10,10 +10,10 @@
 
 #include <cstdint>
 
-class IntVector {
+class int_vector {
  public:
-    IntVector();
-    ~IntVector();
+    int_vector();
+    ~int_vector();
     void add(int32_t);              // add the given integer to the end of the vector
     void insert(int32_t, int32_t);  // insert the second integer at the index of the first integer. Do nothing if the index is out of bounds
     void set(int32_t, int32_t);     // set the value at the index of the first integer to that of the second. Do nothing if the index is out of bounds
