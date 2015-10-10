@@ -7,7 +7,7 @@
 
 #include <cstdint>
 #include "gtest/gtest.h"
-#include "IntVector.h"
+#include "int_vector.h"
 
 /**
  * A suite of very basic tests to ensure that the leaner's vector 
@@ -23,7 +23,7 @@ namespace {
         virtual void SetUp() { } 
         virtual void TearDown() { }
     public:
-        IntVector v;
+        int_vector v;
     };
 
     TEST_F(vector_test, test_add_and_size) {
