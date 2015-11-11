@@ -1,5 +1,5 @@
 /*
- * q2.cpp
+ * q3.cpp
  *
  *  Created on: July 6, 2015
  *      Author: Matthew Mussomele
