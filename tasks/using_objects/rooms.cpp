@@ -1,5 +1,5 @@
 /*
- * rooms.h
+ * rooms.cpp
  *
  *  Created on: June 28, 2015
  *      Author: Matthew Mussomele
