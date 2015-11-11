@@ -6,9 +6,7 @@
  *      
  * This task is based on the squares project, found at http://nifty.stanford.edu/2015/tychonievich-sherriff-layer-counting-squares/
  *
- * Robots simply have knowledge of a set of rooms and their own personal attributes. When interns complete this project, they are
- * not expected to know how the Robot class works, in fact, they may not even have gotten to OOP yet. But this will serve as a useful 
- * abtraction for them to use when designing algorithms to count the number of rooms in sets of rooms. 
+ * Robots simply have knowledge of a set of rooms and their own personal attributes.
  * Because tuples do not have a hash function and sets of rooms should not exceed 1000x1000, coordinates will be 16 bit integers and
  * their 'hash function' should return (x << 16) + y, creating a 32 bit representation, which will be stored in the set of rooms.
  * In order to get the coordinates back from a 32 bit integer, in pseudocode, do
