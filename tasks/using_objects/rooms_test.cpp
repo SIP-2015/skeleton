@@ -1,5 +1,5 @@
 /*
- * functions_test.cpp
+ * rooms_test.cpp
  * 
  *   Created On: July 1, 2015
  *       Author: Matthew Mussomele
