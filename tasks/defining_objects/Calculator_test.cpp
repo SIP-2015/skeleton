@@ -1,5 +1,5 @@
 /*
- * functions_test.cpp
+ * Calculator_test.cpp
  * 
  *   Created On: June 25, 2015
  *       Author: Matthew Mussomele
