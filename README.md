@@ -6,6 +6,7 @@ We do not guarantee that any of the content included in or linked to from this r
 
 We use Google Test as a testing framework. Use of Google test is subject to the following license (found [here](https://github.com/google/googletest/blob/master/googletest/LICENSE)):
 
+```
 Copyright 2008, Google Inc.
 All rights reserved.
 
@@ -34,3 +35,6 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+If you download and use Google Test, you are agreeing to the terms of the above license.
